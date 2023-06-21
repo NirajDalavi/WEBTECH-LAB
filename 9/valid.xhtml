@@ -1,0 +1,58 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>
+        Regxx
+    </title>
+    <script type="text/javascript">
+        function eval(){
+            var uid=document.forms["myform"]["uid"].value;
+            var name=document.forms["myform"]["name"].value;
+
+            var mail=document.forms["myform"]["mail"].value;
+            var pass=document.forms["myform"]["pass"].value;
+            var check= /^[a-zA-Z]+$/ ;
+            var at=mail.includes("@");
+            var com=mail.endsWith(".com");
+            var passcheck= /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[$])$/
+
+            if(uid=="" || uid.length &lt; 5){
+                alert("uid");
+                return false;
+            }
+            else if(!check.test(name)){
+                alert("name");
+                return false;
+            }
+            else if((!at) || (!com)){
+                alert("mail");
+                return false;
+            }
+            else if(!passcheck.test(pass)){
+                alert("password");
+                return false;
+            }
+
+            
+        }
+    </script>
+</head>
+<body>
+    <form id="myform" name="myform" onsubmit="return eval()">
+    user id:
+    <input type="text" id="uid" name="uid"/><br/>
+    name:
+    <input type="text" id="name" name="name"/><br/>
+
+    email:
+    <input type="text" id="mail" name="mail"/><br/>
+
+    password:
+    <input type="text" id="pass" name="pass"/><br/>
+
+    <input type="submit" value="Submit"/>
+    </form> 
+
+
+</body>
+
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Feedback form</h1>
+    <form>
+        Full Name :
+        <input type="text" id="fname" name="fullname" placeholder="Your name"><br><br>
+        E-mail :
+        <input type="email" id="email" name="emailid" placeholder="Your e-mail id"><br><br>
+        USN       : 
+        <input type="text" id="usn" name="USN" placeholder="Your USN"><br><br>
+        Semester  :
+        <select name = "sem">
+            <option value = "1" selected>1</option>
+            <option value = "2">2</option>
+            <option value = "3">3</option>
+            <option value = "4">4</option>
+            <option value = "5">5</option>
+            <option value = "6">6</option>
+            <option value = "7">7</option>
+            <option value = "8">8</option>
+         </select><br><br>
+        Branch    : <br>
+            <input type="radio" name="branch" value="CS">Computer Science and Engineering<br>
+            <input type="radio" name="branch" value="IS">Information Science<br>
+            <input type="radio" name="branch" value="EC">Electronics and Communication<br><br>
+        Feedback  : <br>
+        <textarea rows="6" cols="50" name="feedback"></textarea><br>
+        <input type="checkbox" name="req">
+        <label for="req">Send me a copy of feedback</label><br><br>
+        <input type="submit" value="Submit">
+        <input type="reset" value="Reset">
+    </form>
+</body>
+</html>
