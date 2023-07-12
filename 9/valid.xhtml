@@ -13,7 +13,7 @@
             var check= /^[a-zA-Z]+$/ ;
             var at=mail.includes("@");
             var com=mail.endsWith(".com");
-            var passcheck= /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[$])$/
+            var passcheck= /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[@$!%*?])[A-Za-z\d@$!%*?]{8,}$/; 
 
             if(uid=="" || uid.length &lt; 5){
                 alert("uid");
